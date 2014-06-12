@@ -220,7 +220,6 @@
 		EA8D0FE219483D5000160E5D /* PFRewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D0FE019483D5000160E5D /* PFRewardViewController.m */; };
 		EA8D0FE319483D5000160E5D /* PFRewardViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8D0FE119483D5000160E5D /* PFRewardViewController_Wide.xib */; };
 		EA8D0FE51948409800160E5D /* PFRewardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8D0FE41948409800160E5D /* PFRewardViewController.xib */; };
-		EA8D0FE7194840BC00160E5D /* PFMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8D0FE6194840BC00160E5D /* PFMemberViewController.xib */; };
 		EA8D0FEF1948422D00160E5D /* Create_Button.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8D0FEA1948422D00160E5D /* Create_Button.png */; };
 		EA8D0FF01948422D00160E5D /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8D0FEB1948422D00160E5D /* login.png */; };
 		EA8D0FF11948422D00160E5D /* login@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA8D0FEC1948422D00160E5D /* login@2x.png */; };
@@ -270,6 +269,7 @@
 		EACFFB3E1948BA1A00E62FD3 /* PFEditViewController_Wide.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACFFB3C1948BA1A00E62FD3 /* PFEditViewController_Wide.xib */; };
 		EACFFB401948BAE900E62FD3 /* PFAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACFFB3F1948BAE900E62FD3 /* PFAccountViewController.xib */; };
 		EACFFB421948BC0000E62FD3 /* PFEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EACFFB411948BC0000E62FD3 /* PFEditViewController.xib */; };
+		EAE0D7CA1949723A0008DD8B /* PFMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE0D7C91949723A0008DD8B /* PFMemberViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -603,7 +603,6 @@
 		EA8D0FE019483D5000160E5D /* PFRewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFRewardViewController.m; sourceTree = "<group>"; };
 		EA8D0FE119483D5000160E5D /* PFRewardViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFRewardViewController_Wide.xib; sourceTree = "<group>"; };
 		EA8D0FE41948409800160E5D /* PFRewardViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFRewardViewController.xib; sourceTree = "<group>"; };
-		EA8D0FE6194840BC00160E5D /* PFMemberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMemberViewController.xib; sourceTree = "<group>"; };
 		EA8D0FEA1948422D00160E5D /* Create_Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Create_Button.png; sourceTree = "<group>"; };
 		EA8D0FEB1948422D00160E5D /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		EA8D0FEC1948422D00160E5D /* login@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login@2x.png"; sourceTree = "<group>"; };
@@ -667,6 +666,7 @@
 		EACFFB3C1948BA1A00E62FD3 /* PFEditViewController_Wide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFEditViewController_Wide.xib; sourceTree = "<group>"; };
 		EACFFB3F1948BAE900E62FD3 /* PFAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFAccountViewController.xib; sourceTree = "<group>"; };
 		EACFFB411948BC0000E62FD3 /* PFEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFEditViewController.xib; sourceTree = "<group>"; };
+		EAE0D7C91949723A0008DD8B /* PFMemberViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFMemberViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1452,7 +1452,7 @@
 				EA8D0FDA1948304000160E5D /* PFMemberViewController.h */,
 				EA8D0FDB1948304000160E5D /* PFMemberViewController.m */,
 				EA8D0FDC1948304000160E5D /* PFMemberViewController_Wide.xib */,
-				EA8D0FE6194840BC00160E5D /* PFMemberViewController.xib */,
+				EAE0D7C91949723A0008DD8B /* PFMemberViewController.xib */,
 			);
 			path = Member;
 			sourceTree = "<group>";
@@ -1735,6 +1735,7 @@
 				EA8D0FBC19482CC700160E5D /* button_minus_select.png in Resources */,
 				EA1498791948A671007AE3E6 /* NotBoxNoReadIp4@2x.png in Resources */,
 				EA8D0FD019482CC700160E5D /* stamp.png in Resources */,
+				EAE0D7CA1949723A0008DD8B /* PFMemberViewController.xib in Resources */,
 				EA8D0E0F19480C0F00160E5D /* update_light@2x.png in Resources */,
 				EA8D0F7D1948156A00160E5D /* ProfileLineText@2x.png in Resources */,
 				EA8D0FE51948409800160E5D /* PFRewardViewController.xib in Resources */,
@@ -1761,7 +1762,6 @@
 				EA8D0F9619482AE300160E5D /* PFMapViewController_Wide.xib in Resources */,
 				EA8D0FC519482CC700160E5D /* correct_icon.png in Resources */,
 				EA8D100A19484CE800160E5D /* PFMenuCell.xib in Resources */,
-				EA8D0FE7194840BC00160E5D /* PFMemberViewController.xib in Resources */,
 				EA1498881948A95A007AE3E6 /* PFUpdateCell.xib in Resources */,
 				EA8D0FEF1948422D00160E5D /* Create_Button.png in Resources */,
 				EA8D0FBF19482CC700160E5D /* button_point.png in Resources */,

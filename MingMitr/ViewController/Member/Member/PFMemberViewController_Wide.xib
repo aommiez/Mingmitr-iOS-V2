@@ -23,10 +23,10 @@
                 <outlet property="light1" destination="UOY-n1-vkj" id="U4J-iv-ppN"/>
                 <outlet property="light10" destination="BVo-Ct-LOs" id="FQP-A7-jU7"/>
                 <outlet property="light2" destination="fUx-Sd-jav" id="Oyh-p8-RHQ"/>
-                <outlet property="light3" destination="tH0-GJ-xry" id="V9R-HC-yxy"/>
-                <outlet property="light4" destination="jEp-M8-pCp" id="g1A-Ms-otJ"/>
-                <outlet property="light5" destination="ZlH-7p-d3T" id="a0T-Eu-gjg"/>
-                <outlet property="light6" destination="VPp-EW-VNH" id="n7e-Ck-bKS"/>
+                <outlet property="light3" destination="jEp-M8-pCp" id="dN9-ot-mhG"/>
+                <outlet property="light4" destination="ZlH-7p-d3T" id="jLH-1O-HPd"/>
+                <outlet property="light5" destination="VPp-EW-VNH" id="xhu-Sg-8wE"/>
+                <outlet property="light6" destination="tH0-GJ-xry" id="GRW-7L-6gQ"/>
                 <outlet property="light7" destination="Xdt-Hx-ohv" id="DgY-W4-22M"/>
                 <outlet property="light8" destination="6rg-z1-col" id="CeX-eq-LR5"/>
                 <outlet property="light9" destination="qSE-tJ-AiO" id="329-Kw-D9K"/>
@@ -50,15 +50,15 @@
                 <outlet property="rewardButton" destination="ouu-rr-fer" id="fOO-72-DdZ"/>
                 <outlet property="showpoint" destination="YEZ-Rj-wda" id="Ezn-tW-XCB"/>
                 <outlet property="stamp1" destination="YcT-OC-kO8" id="26O-9f-R9z"/>
-                <outlet property="stamp10" destination="weo-3W-F4j" id="bNB-xQ-TIT"/>
+                <outlet property="stamp10" destination="2IS-sg-JOm" id="mrB-4y-yhQ"/>
                 <outlet property="stamp2" destination="Vap-4Q-DFN" id="y1i-5X-qhK"/>
-                <outlet property="stamp3" destination="y93-Lq-Axv" id="VGR-uB-ZPI"/>
-                <outlet property="stamp4" destination="b9S-2m-0Pu" id="VVX-os-8fg"/>
-                <outlet property="stamp5" destination="ZtB-JG-Bdj" id="kpg-Ek-jtO"/>
-                <outlet property="stamp6" destination="ylg-8a-bTt" id="p0i-Sa-4bO"/>
-                <outlet property="stamp7" destination="2IS-sg-JOm" id="n7M-di-y9X"/>
-                <outlet property="stamp8" destination="g36-cv-FdC" id="RjO-uy-nus"/>
-                <outlet property="stamp9" destination="CdW-ht-arX" id="is2-Jj-Ogt"/>
+                <outlet property="stamp3" destination="g36-cv-FdC" id="Aef-0b-3ck"/>
+                <outlet property="stamp4" destination="CdW-ht-arX" id="7eW-oB-eUH"/>
+                <outlet property="stamp5" destination="weo-3W-F4j" id="lVM-vt-vew"/>
+                <outlet property="stamp6" destination="y93-Lq-Axv" id="YSA-KR-da0"/>
+                <outlet property="stamp7" destination="b9S-2m-0Pu" id="BQ1-WY-GcR"/>
+                <outlet property="stamp8" destination="ZtB-JG-Bdj" id="3hF-pu-oxb"/>
+                <outlet property="stamp9" destination="ylg-8a-bTt" id="DAP-Rh-LfH"/>
                 <outlet property="tableView" destination="0oV-hb-5W1" id="YDv-g5-65J"/>
                 <outlet property="view" destination="hbO-Bf-Ah3" id="oje-2y-z4x"/>
                 <outlet property="waitView" destination="cGN-Cf-ZgE" id="ezp-iT-B7v"/>
@@ -220,10 +220,6 @@
                     <rect key="frame" x="67" y="322" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glow.png" translatesAutoresizingMaskIntoConstraints="NO" id="tH0-GJ-xry">
-                    <rect key="frame" x="4" y="390" width="60" height="60"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glow.png" translatesAutoresizingMaskIntoConstraints="NO" id="jEp-M8-pCp">
                     <rect key="frame" x="130" y="322" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -234,6 +230,10 @@
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glow.png" translatesAutoresizingMaskIntoConstraints="NO" id="VPp-EW-VNH">
                     <rect key="frame" x="256" y="322" width="60" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glow.png" translatesAutoresizingMaskIntoConstraints="NO" id="tH0-GJ-xry">
+                    <rect key="frame" x="4" y="390" width="60" height="60"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="glow.png" translatesAutoresizingMaskIntoConstraints="NO" id="Xdt-Hx-ohv">
@@ -265,6 +265,18 @@
                         <bool key="isElement" value="NO"/>
                     </accessibility>
                 </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_point.png" translatesAutoresizingMaskIntoConstraints="NO" id="g36-cv-FdC">
+                    <rect key="frame" x="138" y="330" width="45" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_point.png" translatesAutoresizingMaskIntoConstraints="NO" id="CdW-ht-arX">
+                    <rect key="frame" x="201" y="330" width="45" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_point.png" translatesAutoresizingMaskIntoConstraints="NO" id="weo-3W-F4j">
+                    <rect key="frame" x="264" y="330" width="45" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_point.png" translatesAutoresizingMaskIntoConstraints="NO" id="y93-Lq-Axv">
                     <rect key="frame" x="13" y="397" width="45" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -285,20 +297,8 @@
                     <rect key="frame" x="264" y="397" width="45" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_point.png" translatesAutoresizingMaskIntoConstraints="NO" id="g36-cv-FdC">
-                    <rect key="frame" x="138" y="330" width="45" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_point.png" translatesAutoresizingMaskIntoConstraints="NO" id="CdW-ht-arX">
-                    <rect key="frame" x="201" y="330" width="45" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_point.png" translatesAutoresizingMaskIntoConstraints="NO" id="weo-3W-F4j">
-                    <rect key="frame" x="264" y="330" width="45" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbK-6V-Qqg">
-                    <rect key="frame" x="13" y="338" width="42" height="28"/>
+                    <rect key="frame" x="14" y="338" width="42" height="28"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="highlightedColor"/>
