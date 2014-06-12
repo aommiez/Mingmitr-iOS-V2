@@ -391,7 +391,12 @@ NSString *password;
     
     NSString *fbAccessToken = [FBSession activeSession].accessTokenData.accessToken;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:[defaults objectForKey:@"deviceToken"]];
+    
+    if ([[defaults objectForKey:@"deviceToken"] intValue] ==0 ) {
+        [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:@""];
+    } else {
+        [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:[defaults objectForKey:@"deviceToken"]];
+    }
     
 }
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
