@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="12F45" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="AppEntities" representedClassName="AppData" syncable="YES">
+        <attribute name="contact_sync_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="member_sync_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="menu_sync_time" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="news_db_row" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="news_sync_time" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="AuthEntities" representedClassName="AuthData" syncable="YES">
+        <attribute name="guest_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="login_status" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="who" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NewsEntities" representedClassName="NewsData" syncable="YES">
+        <attribute name="news_id" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="NewsTypeEntities" representedClassName="NewsTypeData" syncable="YES"/>
+    <entity name="UserEntities" representedClassName="UserData" isAbstract="YES" syncable="YES">
+        <attribute name="birth_date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email_show" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="facebook_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guest_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ios_device_token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="member_timeout" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone_number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone_show" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="token" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updated_at" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="user_id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AppEntities" positionX="81" positionY="72" width="128" height="118"/>
+        <element name="AuthEntities" positionX="81" positionY="-18" width="128" height="88"/>
+        <element name="NewsEntities" positionX="27" positionY="144" width="128" height="58"/>
+        <element name="NewsTypeEntities" positionX="36" positionY="153" width="128" height="45"/>
+        <element name="UserEntities" positionX="-63" positionY="-18" width="128" height="328"/>
+    </elements>
+</model>
