@@ -14,6 +14,13 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #import <FacebookSDK/FacebookSDK.h>
+    #import <CoreData/CoreData.h>
+    // first, you need to import CocoaLumberjack files
+    #import "DDLog.h"
+    #import "DDTTYLogger.h"
+    #import "DDASLLogger.h"
+    // then, you could also add NXVLogFormatter whenever you need it
+    #import "NXVLogFormatter.h"
 #endif
 
 #define IS_IPHONE ( [ [ [ UIDevice currentDevice ] model ] isEqualToString: @"iPhone" ] )

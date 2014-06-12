@@ -10,6 +10,7 @@
 #import "UIERealTimeBlurView.h"
 #import "UIView+MTAnimation.h"
 #import <QuartzCore/QuartzCore.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 #import "PFMingMitrSDK.h"
 
