@@ -105,6 +105,12 @@
         SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [controller addURL:[NSURL URLWithString:urlString]];
         [self presentViewController:controller animated:YES completion:Nil];
+    } else {
+        [[[UIAlertView alloc] initWithTitle:@"Mingmitr"
+                                    message:@"โปรด Login Facebook ใน Setting เครื่องก่อนครับ"
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
     }
     
 }
