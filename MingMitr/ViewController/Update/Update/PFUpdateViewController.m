@@ -48,7 +48,25 @@ BOOL refreshDataNews;
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(account)];
     
+    //notification if (noti = 0) else
     UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Notification_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(notify)];
+    
+    /*
+    UIButton *toggleKeyboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    toggleKeyboardButton.bounds = CGRectMake( 0, 0, 21, 21 );
+    [toggleKeyboardButton setTitle:@"10" forState:UIControlStateNormal];
+    [toggleKeyboardButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
+    
+    [toggleKeyboardButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+    toggleKeyboardButton.contentVerticalAlignment = UIControlContentHorizontalAlignmentCenter;
+    
+    [toggleKeyboardButton setBackgroundColor:[UIColor clearColor]];
+    [toggleKeyboardButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    [toggleKeyboardButton.layer setBorderWidth: 1.0];
+    [toggleKeyboardButton.layer setCornerRadius:10.0f];
+    [toggleKeyboardButton addTarget:self action:@selector(notify) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:toggleKeyboardButton];
+     */
     
     self.navItem.leftBarButtonItem = leftButton;
     self.navItem.rightBarButtonItem = rightButton;
