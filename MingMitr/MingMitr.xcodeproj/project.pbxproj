@@ -19,6 +19,8 @@
 		36230796194808A800D98915 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623077E194808A800D98915 /* UIKit.framework */; };
 		3623079E194808A800D98915 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3623079C194808A800D98915 /* InfoPlist.strings */; };
 		362307A0194808A800D98915 /* MingMitrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623079F194808A800D98915 /* MingMitrTests.m */; };
+		EA024A94194FFE950032CF51 /* icon_reload.png in Resources */ = {isa = PBXBuildFile; fileRef = EA024A92194FFE950032CF51 /* icon_reload.png */; };
+		EA024A95194FFE950032CF51 /* icon_reload@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA024A93194FFE950032CF51 /* icon_reload@2x.png */; };
 		EA14986F1948A671007AE3E6 /* BodyCommentBoxIp5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA14985D1948A671007AE3E6 /* BodyCommentBoxIp5@2x.png */; };
 		EA1498701948A671007AE3E6 /* Circle-Tab.png in Resources */ = {isa = PBXBuildFile; fileRef = EA14985E1948A671007AE3E6 /* Circle-Tab.png */; };
 		EA1498711948A671007AE3E6 /* FootCommentBoxEndIp5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA14985F1948A671007AE3E6 /* FootCommentBoxEndIp5@2x.png */; };
@@ -299,6 +301,8 @@
 		3623079B194808A800D98915 /* MingMitrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MingMitrTests-Info.plist"; sourceTree = "<group>"; };
 		3623079D194808A800D98915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3623079F194808A800D98915 /* MingMitrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MingMitrTests.m; sourceTree = "<group>"; };
+		EA024A92194FFE950032CF51 /* icon_reload.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_reload.png; sourceTree = "<group>"; };
+		EA024A93194FFE950032CF51 /* icon_reload@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_reload@2x.png"; sourceTree = "<group>"; };
 		EA14985D1948A671007AE3E6 /* BodyCommentBoxIp5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BodyCommentBoxIp5@2x.png"; sourceTree = "<group>"; };
 		EA14985E1948A671007AE3E6 /* Circle-Tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Circle-Tab.png"; sourceTree = "<group>"; };
 		EA14985F1948A671007AE3E6 /* FootCommentBoxEndIp5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FootCommentBoxEndIp5@2x.png"; sourceTree = "<group>"; };
@@ -1399,6 +1403,8 @@
 		EA8D0F6D1948156A00160E5D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA024A92194FFE950032CF51 /* icon_reload.png */,
+				EA024A93194FFE950032CF51 /* icon_reload@2x.png */,
 				EA8D0F6E1948156A00160E5D /* chapter_branch_01.png */,
 				EA8D0F6F1948156A00160E5D /* chapter_branch_02.png */,
 				EA8D0F701948156A00160E5D /* chapter_branch_03.png */,
@@ -1665,6 +1671,7 @@
 				EA8D0FC819482CC700160E5D /* cross_icon@2x.png in Resources */,
 				EA8D0FC919482CC700160E5D /* glow@2x.png in Resources */,
 				EA8D0FC319482CC700160E5D /* Button_reward_select.png in Resources */,
+				EA024A94194FFE950032CF51 /* icon_reload.png in Resources */,
 				EA8D0FBB19482CC700160E5D /* button_minus.png in Resources */,
 				EA14987C1948A671007AE3E6 /* NotBoxReadedIp4@2x.png in Resources */,
 				EA8D0FBE19482CC700160E5D /* button_plus_select.png in Resources */,
@@ -1750,6 +1757,7 @@
 				EA8D0F871948170800160E5D /* PFContactCell.xib in Resources */,
 				EA8D0F791948156A00160E5D /* icon_logo.png in Resources */,
 				EA8D0FCD19482CC700160E5D /* Light@2x.png in Resources */,
+				EA024A95194FFE950032CF51 /* icon_reload@2x.png in Resources */,
 				EA8D0FC019482CC700160E5D /* button_point@2x.png in Resources */,
 				EA1498761948A671007AE3E6 /* linePrev.png in Resources */,
 				EA14989B1948B2F4007AE3E6 /* PFDetailViewController.xib in Resources */,
@@ -2030,7 +2038,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/pariwat/Mingmitr-iOS-V2/Frameworks",
+					"\"$(SRCROOT)/../Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
@@ -2047,7 +2055,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/pariwat/Mingmitr-iOS-V2/Frameworks",
+					"\"$(SRCROOT)/../Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
