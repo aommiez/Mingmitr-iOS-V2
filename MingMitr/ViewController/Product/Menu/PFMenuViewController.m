@@ -217,6 +217,12 @@ BOOL refreshDataMenu;
     
     if ([[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"product_length"] intValue] == 0 && [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"folder_length"] intValue] == 0) {
         
+        [[[UIAlertView alloc] initWithTitle:@"Mingmitr"
+                                    message:@"Coming soon."
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil] show];
+        
     } else if ([[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"product_length"] intValue] != 0 ) {
         
         [self.delegate HideTabbar];
