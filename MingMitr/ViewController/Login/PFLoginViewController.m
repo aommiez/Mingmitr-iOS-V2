@@ -125,9 +125,16 @@ NSString *password;
                         options:UIViewAnimationCurveEaseInOut
                      animations:^ {
                          //[self.scrollView setAlpha:1];
-                         NSString *dateString = [NSDateFormatter localizedStringFromDate:self.pick.date
-                                                                               dateStyle:NSDateFormatterShortStyle
-                                                                               timeStyle:NSDateFormatterNoStyle];
+//                         NSString *dateString = [NSDateFormatter localizedStringFromDate:self.pick.date
+//                                                                               dateStyle:NSDateFormatterShortStyle
+//                                                                               timeStyle:NSDateFormatterNoStyle];
+                         
+                         NSDateFormatter *date = [[NSDateFormatter alloc] init];
+                         date.dateFormat = @"yyyy/MM/dd";
+                         NSArray *temp = [[NSString stringWithFormat:@"%@",[date stringFromDate:self.pick.date]] componentsSeparatedByString:@""];
+                         NSString *dateString = [[NSString alloc] init];
+                         dateString = [[NSString alloc] initWithString:[temp objectAtIndex:0]];
+                         
                          [self.dateOfBirthSignUp setText:dateString];
                          self.pick.alpha = 0;
                          self.pickDone.alpha = 0;
