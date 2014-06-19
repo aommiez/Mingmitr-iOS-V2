@@ -43,12 +43,17 @@
 @property (weak, nonatomic) IBOutlet UITextField *passwordSignUp;
 @property (weak, nonatomic) IBOutlet UITextField *confirmSignUp;
 @property (weak, nonatomic) IBOutlet UITextField *dateOfBirthSignUp;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *selectGender;
+@property (weak, nonatomic) IBOutlet UITextField *gender;
 
 - (IBAction)dateBTapped:(id)sender;
+- (IBAction)genderTapped:(id)sender;
+
+- (IBAction)closedateTapped:(id)sender;
+- (IBAction)closegenderTapped:(id)sender;
 
 @property (retain, nonatomic) UIDatePicker *pick;
 @property (retain, nonatomic) UIButton *pickDone;
+
 - (IBAction)sumitTapped:(id)sender;
 
 @property (strong, nonatomic) NSString *menu;

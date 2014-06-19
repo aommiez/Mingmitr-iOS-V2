@@ -14,7 +14,6 @@
 
 @implementation PFLoginViewController
 
-NSString *gender;
 NSString *password;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,7 +29,6 @@ NSString *password;
 {
     [super viewDidLoad];
     
-    gender = nil;
     self.pick = [[UIDatePicker alloc] init];
     self.pickDone = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [self.pickDone setFrame:CGRectMake(50, 370, 200, 44)];
@@ -124,10 +122,6 @@ NSString *password;
                           delay:0.0  /* starts the animation after 3 seconds */
                         options:UIViewAnimationCurveEaseInOut
                      animations:^ {
-                         //[self.scrollView setAlpha:1];
-//                         NSString *dateString = [NSDateFormatter localizedStringFromDate:self.pick.date
-//                                                                               dateStyle:NSDateFormatterShortStyle
-//                                                                               timeStyle:NSDateFormatterNoStyle];
                          
                          NSDateFormatter *date = [[NSDateFormatter alloc] init];
                          date.dateFormat = @"yyyy/MM/dd";
@@ -233,15 +227,34 @@ NSString *password;
                          
                      }];
 }
+- (IBAction)genderTapped:(id)sender {
+    [self hideKeyboard];
+    self.registerView.alpha = 0;
+    self.blurView.userInteractionEnabled = NO;
+    
+    [[[UIAlertView alloc] initWithTitle:@"Mingmitr"
+                                message:@"Select gender."
+                               delegate:self
+                      cancelButtonTitle:@"Male"
+                      otherButtonTitles:@"Female", nil] show];
+}
+- (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        self.gender.text = @"Male";
+    } else {
+        self.gender.text = @"Female";
+    }
+}
+- (IBAction)closedateTapped:(id)sender {
+    self.dateOfBirthSignUp.text = @"";
+}
+- (IBAction)closegenderTapped:(id)sender {
+    self.gender.text = @"";
+}
 - (IBAction)sumitTapped:(id)sender {
     
     password = self.passwordSignUp.text;
     
-    if (self.selectGender.selectedSegmentIndex == 0) {
-        gender = @"Male";
-    } else {
-        gender = @"Female";
-    }
     if ( [self.username.text isEqualToString:@""]) {
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Mingmitr!"
                                                           message:@"Username Incorrect"
@@ -282,16 +295,8 @@ NSString *password;
                                                 otherButtonTitles:nil];
         [message show];
         return;
-    }  else if ( [self.dateOfBirthSignUp.text isEqualToString:@""]) {
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Mingmitr!"
-                                                          message:@"Birth of Date Incorrect"
-                                                         delegate:nil
-                                                cancelButtonTitle:@"OK"
-                                                otherButtonTitles:nil];
-        [message show];
-        return;
     } else {
-        [self.mingmitrSDK registerWithUsername:self.username.text password:self.passwordSignUp.text email:self.emailSignUp.text gender:gender birth_date:self.dateOfBirthSignUp.text];
+        [self.mingmitrSDK registerWithUsername:self.username.text password:self.passwordSignUp.text email:self.emailSignUp.text gender:self.gender.text birth_date:self.dateOfBirthSignUp.text];
     }
 }
 #pragma mark - Satit Api Delegate

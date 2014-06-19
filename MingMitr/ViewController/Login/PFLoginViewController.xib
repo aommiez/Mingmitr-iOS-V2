@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13A497d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13A510d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -11,11 +11,11 @@
                 <outlet property="dateOfBirthSignUp" destination="J6i-re-GS5" id="RLa-nD-eF2"/>
                 <outlet property="emailSignIn" destination="NaO-2i-08X" id="gvx-3a-A4N"/>
                 <outlet property="emailSignUp" destination="b0U-oh-qTl" id="3xM-NB-JsQ"/>
+                <outlet property="gender" destination="e75-55-tlp" id="0Hk-JX-oob"/>
                 <outlet property="loginView" destination="oyo-xz-qGp" id="hrR-8h-xsy"/>
                 <outlet property="passwordSignIn" destination="xQ6-mC-qd2" id="uqu-ma-aLZ"/>
                 <outlet property="passwordSignUp" destination="cr8-De-3oY" id="Z0o-AY-wGS"/>
                 <outlet property="registerView" destination="y10-8K-UEH" id="2OM-02-MQw"/>
-                <outlet property="selectGender" destination="dUq-rU-MiA" id="yVW-eA-GZf"/>
                 <outlet property="username" destination="vHJ-ix-99L" id="7wf-rh-9b2"/>
                 <outlet property="view" destination="jQt-Uf-dsN" id="tIX-EQ-eJJ"/>
             </connections>
@@ -135,7 +135,7 @@
                     </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eSo-8m-doD">
-                    <rect key="frame" x="20" y="271" width="200" height="45"/>
+                    <rect key="frame" x="20" y="271" width="240" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <state key="normal">
@@ -146,8 +146,8 @@
                         <action selector="dateBTapped:" destination="-1" eventType="touchUpInside" id="Kb5-xI-TnN"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" minimumFontSize="17" id="J6i-re-GS5">
-                    <rect key="frame" x="20" y="279" width="200" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth (Optional)" minimumFontSize="17" id="J6i-re-GS5">
+                    <rect key="frame" x="20" y="279" width="240" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -155,6 +155,16 @@
                         <outlet property="delegate" destination="-1" id="IF5-lx-aCj"/>
                     </connections>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rjh-Wh-Jw3">
+                    <rect key="frame" x="230" y="279" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="icon_close.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closedateTapped:" destination="-1" eventType="touchUpInside" id="KM0-hV-D2S"/>
+                    </connections>
+                </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" id="cr8-De-3oY">
                     <rect key="frame" x="20" y="197" width="240" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -164,15 +174,6 @@
                         <outlet property="delegate" destination="-1" id="vge-Ef-UmO"/>
                     </connections>
                 </textField>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" id="dUq-rU-MiA">
-                    <rect key="frame" x="20" y="317" width="240" height="29"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <segments>
-                        <segment title="Male"/>
-                        <segment title="Female"/>
-                    </segments>
-                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                </segmentedControl>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" id="vHJ-ix-99L">
                     <rect key="frame" x="20" y="117" width="240" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -186,6 +187,37 @@
                     <rect key="frame" x="105" y="10" width="70" height="70"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qfU-iR-lvc">
+                    <rect key="frame" x="20" y="312" width="240" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal">
+                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="genderTapped:" destination="-1" eventType="touchUpInside" id="n5I-jk-iol"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender (Optional)" minimumFontSize="17" id="e75-55-tlp">
+                    <rect key="frame" x="20" y="320" width="240" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="K7S-Pp-MqG"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HJz-7F-tKn">
+                    <rect key="frame" x="230" y="320" width="30" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="icon_close.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closegenderTapped:" destination="-1" eventType="touchUpInside" id="NDi-2a-dkM"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.97254901959999995" green="0.96470588239999999" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
         </view>
@@ -194,6 +226,7 @@
         <image name="Create_Button.png" width="480" height="80"/>
         <image name="Login_Button.png" width="240" height="80"/>
         <image name="Sign_Button.png" width="240" height="80"/>
+        <image name="icon_close.png" width="20" height="20"/>
         <image name="login.png" width="70" height="67"/>
     </resources>
 </document>

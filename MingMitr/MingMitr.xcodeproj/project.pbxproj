@@ -58,6 +58,7 @@
 		EA1498AB1948B52D007AE3E6 /* PFUpdateCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1498A91948B52D007AE3E6 /* PFUpdateCommentCell.m */; };
 		EA1498AC1948B52D007AE3E6 /* PFUpdateCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498AA1948B52D007AE3E6 /* PFUpdateCommentCell.xib */; };
 		EA1498AE1948B638007AE3E6 /* PFUpdateDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498AD1948B638007AE3E6 /* PFUpdateDetailViewController.xib */; };
+		EA374B831952C099008824CC /* icon_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EA374B821952C099008824CC /* icon_close@2x.png */; };
 		EA8D0DFD19480C0F00160E5D /* notificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8D0DE119480C0F00160E5D /* notificationView.xib */; };
 		EA8D0DFE19480C0F00160E5D /* PFCustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D0DE319480C0F00160E5D /* PFCustomBadge.m */; };
 		EA8D0DFF19480C0F00160E5D /* PFTabBarItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EA8D0DE519480C0F00160E5D /* PFTabBarItemButton.m */; };
@@ -346,6 +347,7 @@
 		EA1498A91948B52D007AE3E6 /* PFUpdateCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFUpdateCommentCell.m; sourceTree = "<group>"; };
 		EA1498AA1948B52D007AE3E6 /* PFUpdateCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFUpdateCommentCell.xib; sourceTree = "<group>"; };
 		EA1498AD1948B638007AE3E6 /* PFUpdateDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFUpdateDetailViewController.xib; sourceTree = "<group>"; };
+		EA374B821952C099008824CC /* icon_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_close@2x.png"; sourceTree = "<group>"; };
 		EA8D0DE119480C0F00160E5D /* notificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = notificationView.xib; sourceTree = "<group>"; };
 		EA8D0DE219480C0F00160E5D /* PFCustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFCustomBadge.h; sourceTree = "<group>"; };
 		EA8D0DE319480C0F00160E5D /* PFCustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFCustomBadge.m; sourceTree = "<group>"; };
@@ -1488,6 +1490,7 @@
 		EA8D0FE91948422D00160E5D /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				EA374B821952C099008824CC /* icon_close@2x.png */,
 				EA8D0FEA1948422D00160E5D /* Create_Button.png */,
 				EA8D0FEB1948422D00160E5D /* login.png */,
 				EA8D0FEC1948422D00160E5D /* login@2x.png */,
@@ -1735,6 +1738,7 @@
 				EA8D0FD119482CC700160E5D /* stamp@2x.png in Resources */,
 				EA8D0FBD19482CC700160E5D /* button_plus.png in Resources */,
 				EACFFB341948B9A800E62FD3 /* ProfileLineText@2x.png in Resources */,
+				EA374B831952C099008824CC /* icon_close@2x.png in Resources */,
 				3623078D194808A800D98915 /* Images.xcassets in Resources */,
 				EA1498701948A671007AE3E6 /* Circle-Tab.png in Resources */,
 				EACFFB331948B9A800E62FD3 /* Icon_Phone@2x.png in Resources */,
@@ -2045,7 +2049,7 @@
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
 				INFOPLIST_FILE = "MingMitr/MingMitr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "23C92060-D5FC-4414-80EF-926E27771B87";
+				PROVISIONING_PROFILE = "AD2907D2-0923-40B0-8470-AAC6AEBDC32A";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2066,7 +2070,7 @@
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
 				INFOPLIST_FILE = "MingMitr/MingMitr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "23C92060-D5FC-4414-80EF-926E27771B87";
+				PROVISIONING_PROFILE = "AD2907D2-0923-40B0-8470-AAC6AEBDC32A";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};

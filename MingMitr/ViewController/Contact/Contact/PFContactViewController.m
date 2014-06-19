@@ -288,13 +288,15 @@ BOOL refreshDataContact;
 
 
 - (IBAction)emailTapped:(id)sender {
-    UIActionSheet *actionSheet = [[UIActionSheet alloc]
-                                  initWithTitle:@"Select Menu"
-                                  delegate:self
-                                  cancelButtonTitle:@"cancel"
-                                  destructiveButtonTitle:nil
-                                  otherButtonTitles:@"Send Email", nil];
-    [actionSheet showInView:[[[[UIApplication sharedApplication] keyWindow] subviews] lastObject]];
+    //if (![self.emailButton.titleLabel isEqual:nil]) {
+        UIActionSheet *actionSheet = [[UIActionSheet alloc]
+                                      initWithTitle:@"Select Menu"
+                                      delegate:self
+                                      cancelButtonTitle:@"cancel"
+                                      destructiveButtonTitle:nil
+                                      otherButtonTitles:@"Send Email", nil];
+        [actionSheet showInView:[[[[UIApplication sharedApplication] keyWindow] subviews] lastObject]];
+    //}
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
