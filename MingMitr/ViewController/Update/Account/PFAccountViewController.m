@@ -180,7 +180,7 @@
     
 }
 
-- (void) MMEditViewControllerBack {
+- (void) PFEditViewControllerBack {
     [self viewDidLoad];
 }
 
