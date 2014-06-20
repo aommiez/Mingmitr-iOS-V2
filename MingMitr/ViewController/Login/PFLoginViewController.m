@@ -229,19 +229,18 @@ NSString *password;
 }
 - (IBAction)genderTapped:(id)sender {
     [self hideKeyboard];
-    self.registerView.alpha = 0;
-    self.blurView.userInteractionEnabled = NO;
     
-    [[[UIAlertView alloc] initWithTitle:@"Mingmitr"
-                                message:@"Select gender."
-                               delegate:self
-                      cancelButtonTitle:@"Male"
-                      otherButtonTitles:@"Female", nil] show];
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Mingmitr"
+                                                      message:@"Select gender."
+                                                     delegate:self
+                                            cancelButtonTitle:@"Cancel"
+                                            otherButtonTitles:@"Male", @"Female", nil];
+    [message show];
 }
 - (void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         self.gender.text = @"Male";
-    } else {
+    } else if (buttonIndex == 2) {
         self.gender.text = @"Female";
     }
 }
@@ -404,7 +403,10 @@ NSString *password;
     NSString *fbAccessToken = [FBSession activeSession].accessTokenData.accessToken;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    if ([[defaults objectForKey:@"deviceToken"] intValue] == 0 ) {
+    NSLog(@"%@",[defaults objectForKey:@"deviceToken"]);
+    NSString *devicetoken = [NSString stringWithFormat:@"%@",[defaults objectForKey:@"deviceToken"]];
+    
+    if ([devicetoken isEqualToString:@""]) {
         [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:@""];
     } else {
         [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:[defaults objectForKey:@"deviceToken"]];

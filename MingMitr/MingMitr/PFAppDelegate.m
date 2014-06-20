@@ -150,7 +150,7 @@ BOOL newMedia;
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:deviceToken forKey:@"deviceToken"];
+    //[defaults setObject:deviceToken forKey:@"deviceToken"];
     [defaults synchronize];
     
     NSLog(@"My token is: %@", deviceToken);

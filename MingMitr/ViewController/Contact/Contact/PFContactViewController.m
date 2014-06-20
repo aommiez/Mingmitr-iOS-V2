@@ -288,7 +288,8 @@ BOOL refreshDataContact;
 
 
 - (IBAction)emailTapped:(id)sender {
-    //if (![self.emailButton.titleLabel isEqual:nil]) {
+
+    if (![[self.obj objectForKey:@"email"] isEqualToString:@""]) {
         UIActionSheet *actionSheet = [[UIActionSheet alloc]
                                       initWithTitle:@"Select Menu"
                                       delegate:self
@@ -296,7 +297,7 @@ BOOL refreshDataContact;
                                       destructiveButtonTitle:nil
                                       otherButtonTitles:@"Send Email", nil];
         [actionSheet showInView:[[[[UIApplication sharedApplication] keyWindow] subviews] lastObject]];
-    //}
+    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
@@ -311,7 +312,7 @@ BOOL refreshDataContact;
         // Email Content
         NSString *messageBody = @"Mingmitr!";
         // To address
-        NSArray *toRecipents = [NSArray arrayWithObject:@"mingmitrcoffee@gmail.com"];
+        NSArray *toRecipents = [NSArray arrayWithObject:[self.obj objectForKey:@"email"]];
         
         [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:229.0f/255.0f green:172.0f/255.0f blue:48.0f/255.0f alpha:1.0f]];
         
@@ -336,24 +337,27 @@ BOOL refreshDataContact;
 
 - (IBAction)webTapped:(id)sender {
     
-    [self.delegate HideTabbar];
+    if (![[self.obj objectForKey:@"website"] isEqualToString:@""]) {
     
-    PFWebViewController *webView = [[PFWebViewController alloc] init];
+        [self.delegate HideTabbar];
     
-    if(IS_WIDESCREEN) {
+        PFWebViewController *webView = [[PFWebViewController alloc] init];
+    
+        if(IS_WIDESCREEN) {
         
-        webView = [[PFWebViewController alloc] initWithNibName:@"PFWebViewController_Wide" bundle:nil];
+            webView = [[PFWebViewController alloc] initWithNibName:@"PFWebViewController_Wide" bundle:nil];
         
-    } else {
+        } else {
         
-        webView = [[PFWebViewController alloc] initWithNibName:@"PFWebViewController" bundle:nil];
+            webView = [[PFWebViewController alloc] initWithNibName:@"PFWebViewController" bundle:nil];
         
+        }
+    
+        NSString *getweb = [self.obj objectForKey:@"website"];
+        webView.url = getweb;
+        webView.delegate = self;
+        [self.navController pushViewController:webView animated:YES];
     }
-    
-    NSString *getweb = [self.obj objectForKey:@"website"];
-    webView.url = getweb;
-    webView.delegate = self;
-    [self.navController pushViewController:webView animated:YES];
 }
 
 - (IBAction) mapTapped:(id)sender {

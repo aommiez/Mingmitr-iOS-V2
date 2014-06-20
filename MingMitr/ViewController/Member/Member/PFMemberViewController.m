@@ -782,6 +782,10 @@
     }
 }
 
+- (void)PFMemberViewController:(id)sender{
+    [self.delegate ShowTabbar];
+}
+
 - (IBAction)removeAmountTapped:(id)sender {
     NSString *amount;
     int amountValue = [self.amountLabel.text intValue];
