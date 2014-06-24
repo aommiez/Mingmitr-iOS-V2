@@ -106,7 +106,7 @@ BOOL refreshDataContact;
     int countPicture = [[images objectForKey:@"pictures"] count];
     for (int i = 0; i < countPicture; i++) {
         
-        NSString *urlStr = [[NSString alloc] initWithFormat:@"%@",[[[[images objectForKey:@"pictures"] objectAtIndex:i] objectForKey:@"picture"] objectForKey:@"link"]];
+        NSString *urlStr = [[NSString alloc] initWithFormat:@"%@%@",[[[[images objectForKey:@"pictures"] objectAtIndex:i] objectForKey:@"picture"] objectForKey:@"link"],@"?width=320&height=180"];
         NSURL *url = [[NSURL alloc] initWithString:urlStr];
         
         NSData *data = [NSData dataWithContentsOfURL : url];
