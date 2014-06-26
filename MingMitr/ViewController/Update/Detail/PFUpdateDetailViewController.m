@@ -199,7 +199,7 @@ BOOL newMediaDetail;
                           delay:0.1  /* starts the animation after 3 seconds */
                         options:UIViewAnimationCurveEaseOut
                      animations:^ {
-                         self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, 320, self.tableView.frame.size.height);
+                         self.tableView.frame = CGRectMake(self.tableView.frame.origin.x, self.tableView.frame.origin.y, 320, self.view.frame.size.height-44);
                          if ([self.arrObj count] > 0)
                              [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[self.arrObj count]-1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
                      }

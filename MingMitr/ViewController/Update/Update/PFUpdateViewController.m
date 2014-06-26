@@ -128,7 +128,7 @@ BOOL refreshDataNews;
     
 }
 
-- (void)PFMingMitrSDK:(id)sender getContactErrorResponse:(NSString *)errorResponse {
+- (void)PFMingMitrSDK:(id)sender getNewsErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
 }
 
