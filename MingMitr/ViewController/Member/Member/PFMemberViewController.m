@@ -783,6 +783,7 @@
 }
 
 - (void)PFMemberViewController:(id)sender{
+    [self viewDidLoad];
     [self.delegate ShowTabbar];
 }
 
