@@ -406,7 +406,7 @@ NSString *password;
     NSLog(@"%@",[defaults objectForKey:@"deviceToken"]);
     NSString *devicetoken = [NSString stringWithFormat:@"%@",[defaults objectForKey:@"deviceToken"]];
     
-    if ([devicetoken isEqualToString:@""]) {
+    if ([devicetoken isEqualToString:@"(null)"] || [devicetoken isEqualToString:@""]) {
         [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:@""];
     } else {
         [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:[defaults objectForKey:@"deviceToken"]];

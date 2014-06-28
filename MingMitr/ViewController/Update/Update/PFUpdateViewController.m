@@ -170,35 +170,29 @@ BOOL refreshDataNews;
 }
 - (void)notify {
     
-    [[[UIAlertView alloc] initWithTitle:@"Mingmitr"
-                                message:@"Notification coming soon."
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
+    if ([[self.mingmitrSDK getAuth] isEqualToString:@"Guest Login"] || [[self.mingmitrSDK getAuth] isEqualToString:@"NO"]){
+        
+        self.loginView = [PFLoginViewController alloc];
+        self.loginView.menu = @"notify";
+        self.loginView.delegate = self;
+        [self.view addSubview:self.loginView.view];
+        
+    }else{
     
-//    if ([[self.mingmitrSDK getAuth] isEqualToString:@"Guest Login"] || [[self.mingmitrSDK getAuth] isEqualToString:@"NO"]){
-//        
-//        self.loginView = [PFLoginViewController alloc];
-//        self.loginView.menu = @"notify";
-//        self.loginView.delegate = self;
-//        [self.view addSubview:self.loginView.view];
-//        
-//    }else{
-//    
-//        [self.delegate HideTabbar];
-//        
-//        PFNotificationViewController *notifyView = [[PFNotificationViewController alloc] init];
-//        
-//        if(IS_WIDESCREEN){
-//            notifyView = [[PFNotificationViewController alloc] initWithNibName:@"PFNotificationViewController_Wide" bundle:nil];
-//        } else {
-//            notifyView = [[PFNotificationViewController alloc] initWithNibName:@"PFNotificationViewController" bundle:nil];
-//        }
-//        
-//        notifyView.delegate = self;
-//        [self.navController pushViewController:notifyView animated:YES];
-//        
-//    }
+        [self.delegate HideTabbar];
+        
+        PFNotificationViewController *notifyView = [[PFNotificationViewController alloc] init];
+        
+        if(IS_WIDESCREEN){
+            notifyView = [[PFNotificationViewController alloc] initWithNibName:@"PFNotificationViewController_Wide" bundle:nil];
+        } else {
+            notifyView = [[PFNotificationViewController alloc] initWithNibName:@"PFNotificationViewController" bundle:nil];
+        }
+        
+        notifyView.delegate = self;
+        [self.navController pushViewController:notifyView animated:YES];
+        
+    }
     
 }
 
