@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIERealTimeBlurView.h"
 #import "CRGradientNavigationBar.h"
 #import "DLImageLoader.h"
 

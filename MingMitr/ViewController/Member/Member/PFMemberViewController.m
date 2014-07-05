@@ -780,8 +780,8 @@
 }
 
 - (void)PFMemberViewController:(id)sender{
-    [self viewDidLoad];
     [self.delegate ShowTabbar];
+    [self viewDidLoad];
 }
 
 - (IBAction)removeAmountTapped:(id)sender {
@@ -805,9 +805,7 @@
 }
 
 - (IBAction)confirmTapped:(id)sender {
-    
     [self.mingmitrSDK stampAddPoint:self.amountLabel.text password:self.password.text];
-    
 }
 
 - (IBAction)cancelTapped:(id)sender {
