@@ -55,8 +55,8 @@ NSString *password;
     FBLoginView *fbView = [[FBLoginView alloc] init];
     fbView.delegate = self;
     fbView.frame = CGRectMake(20, 123, 240, 60);
-    fbView.readPermissions = @[@"basic_info", @"email"];
-    FBSession *session = [[FBSession alloc] initWithPermissions:@[@"basic_info", @"email"]];
+    fbView.readPermissions = @[@"public_profile", @"email"];
+    FBSession *session = [[FBSession alloc] initWithPermissions:@[@"public_profile", @"email"]];
     [FBSession setActiveSession:session];
     [self.loginView addSubview:fbView];
     
@@ -399,11 +399,8 @@ NSString *password;
 // This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
-    
     NSString *fbAccessToken = [FBSession activeSession].accessTokenData.accessToken;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSLog(@"%@",[defaults objectForKey:@"deviceToken"]);
     NSString *devicetoken = [NSString stringWithFormat:@"%@",[defaults objectForKey:@"deviceToken"]];
     
     if ([devicetoken isEqualToString:@"(null)"] || [devicetoken isEqualToString:@""]) {
@@ -411,8 +408,8 @@ NSString *password;
     } else {
         [self.mingmitrSDK LoginWithFacebook:fbAccessToken ios_device_token:[defaults objectForKey:@"deviceToken"]];
     }
-    
 }
+
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     NSLog(@"You're logged in as");
 }

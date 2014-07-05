@@ -19,7 +19,7 @@
 		36230796194808A800D98915 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623077E194808A800D98915 /* UIKit.framework */; };
 		3623079E194808A800D98915 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3623079C194808A800D98915 /* InfoPlist.strings */; };
 		362307A0194808A800D98915 /* MingMitrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623079F194808A800D98915 /* MingMitrTests.m */; };
-		52A20C20195E85B900D67BED /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A20C1F195E85B900D67BED /* FacebookSDK.framework */; };
+		527E1ED7196806FE00A13176 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527E1ED6196806FE00A13176 /* FacebookSDK.framework */; };
 		52A20C55195E89CB00D67BED /* contact_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A20C44195E89CB00D67BED /* contact_light.png */; };
 		52A20C56195E89CB00D67BED /* contact_standby.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A20C45195E89CB00D67BED /* contact_standby.png */; };
 		52A20C57195E89CB00D67BED /* member_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A20C46195E89CB00D67BED /* member_light.png */; };
@@ -302,7 +302,7 @@
 		3623079B194808A800D98915 /* MingMitrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MingMitrTests-Info.plist"; sourceTree = "<group>"; };
 		3623079D194808A800D98915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3623079F194808A800D98915 /* MingMitrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MingMitrTests.m; sourceTree = "<group>"; };
-		52A20C1F195E85B900D67BED /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Frameworks/FacebookSDK.framework; sourceTree = "<group>"; };
+		527E1ED6196806FE00A13176 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Frameworks/FacebookSDK.framework; sourceTree = "<group>"; };
 		52A20C44195E89CB00D67BED /* contact_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_light.png; sourceTree = "<group>"; };
 		52A20C45195E89CB00D67BED /* contact_standby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_standby.png; sourceTree = "<group>"; };
 		52A20C46195E89CB00D67BED /* member_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = member_light.png; sourceTree = "<group>"; };
@@ -681,7 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8D0F09194811AD00160E5D /* libz.dylib in Frameworks */,
-				52A20C20195E85B900D67BED /* FacebookSDK.framework in Frameworks */,
+				527E1ED7196806FE00A13176 /* FacebookSDK.framework in Frameworks */,
 				EA8D0F071948119300160E5D /* CoreData.framework in Frameworks */,
 				EA8D0F051948118800160E5D /* CoreImage.framework in Frameworks */,
 				EA8D0F031948117A00160E5D /* SystemConfiguration.framework in Frameworks */,
@@ -728,7 +728,7 @@
 		36230779194808A800D98915 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				52A20C1F195E85B900D67BED /* FacebookSDK.framework */,
+				527E1ED6196806FE00A13176 /* FacebookSDK.framework */,
 				EA8D0F08194811AD00160E5D /* libz.dylib */,
 				EA8D0F061948119300160E5D /* CoreData.framework */,
 				EA8D0F041948118800160E5D /* CoreImage.framework */,
@@ -2049,6 +2049,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../Frameworks\"",
 					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks",
+					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
@@ -2071,6 +2072,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../Frameworks\"",
 					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks",
+					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
