@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "CRGradientNavigationBar.h"
-#import "UIERealTimeBlurView.h"
-#import "AMBlurView.h"
 #import "DLImageLoader.h"
 
 #import "PFLoginViewController.h"
@@ -41,7 +39,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *amountLabel;
 
-@property (strong, nonatomic) IBOutlet AMBlurView *blurView;
+@property (strong, nonatomic) IBOutlet UIView *blurView;
 @property (strong, nonatomic) IBOutlet UIView *addPointView;
 @property (strong, nonatomic) IBOutlet UIView *amountFinishView;
 @property (strong, nonatomic) IBOutlet UIView *amountFailView;

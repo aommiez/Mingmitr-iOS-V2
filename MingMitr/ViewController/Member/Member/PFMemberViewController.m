@@ -100,9 +100,6 @@
         
         [self.addPointButton setTitle:@"Add" forState:UIControlStateNormal];
         
-        [self.blurView setBlurTintColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.1]];
-        self.blurView.alpha = 0.7;
-        
         //[self.mingmitrSDK getStamp];
         [self.mingmitrSDK getStampStyle];
         
