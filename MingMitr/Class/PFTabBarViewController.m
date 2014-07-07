@@ -64,7 +64,6 @@ int oldIndex;
     }
 }
 
-
 #pragma mark - private
 - (void)updateTabBarItem:(id)sender{
     self.tabBarView.alpha = 0.9;

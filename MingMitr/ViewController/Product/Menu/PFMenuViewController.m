@@ -273,10 +273,6 @@ BOOL refreshDataMenu;
     [self.delegate PFGalleryViewController:self sum:sum current:current];
 }
 
-- (void)PFF1ViewController:(id)sender viewPicture:(NSString *)link{
-    [self.delegate PFImageViewController:self viewPicture:link];
-}
-
 - (void) PFD1ViewControllerBack {
     [self.delegate ShowTabbar];
 }

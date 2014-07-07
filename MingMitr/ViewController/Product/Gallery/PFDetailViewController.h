@@ -17,7 +17,7 @@
 
 @protocol PFDetailViewControllerDelegate <NSObject>
 
-- (void)PFDetailViewController:(id)sender viewPicture:(NSString *)link;
+- (void)PFImageViewController:(id)sender viewPicture:(NSString *)link;
 
 @end
 

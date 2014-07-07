@@ -563,17 +563,10 @@ BOOL newMediaDetail;
     NSString *urlString = [[NSString alloc]init];
     urlString = [[NSString alloc] initWithFormat:@"%@",[[self.obj objectForKey:@"node"] objectForKey:@"share_url"]];
     
-    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-        SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [controller addURL:[NSURL URLWithString:urlString]];
-        [self presentViewController:controller animated:YES completion:Nil];
-    } else {
-        [[[UIAlertView alloc] initWithTitle:@"Mingmitr"
-                                    message:@"Please login facebook on Settings."
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
-    }
+    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+    [controller addURL:[NSURL URLWithString:urlString]];
+    [self presentViewController:controller animated:YES completion:Nil];
+
     
 }
 

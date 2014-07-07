@@ -167,11 +167,11 @@
     }
 }
 
-- (void)PFD1ViewController:(id)sender viewPicture:(NSString *)link{
-    [self.delegate PFF1ViewController:self viewPicture:link];
+- (void)PFImageViewController:(id)sender viewPicture:(NSString *)link{
+    [self.delegate PFImageViewController:self viewPicture:link];
 }
 
-- (void)PFD1ViewController:(id)sender sum:(NSMutableArray *)sum current:(NSString *)current{
+- (void)PFGalleryViewController:(id)sender sum:(NSMutableArray *)sum current:(NSString *)current{
     [self.delegate PFGalleryViewController:self sum:sum current:current];
 }
 

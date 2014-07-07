@@ -18,8 +18,8 @@
 @protocol PFD1ViewControllerBackDelegate <NSObject>
 
 - (void)PFD1ViewControllerBack;
-- (void)PFD1ViewController:(id)sender viewPicture:(NSString *)link;
-- (void)PFD1ViewController:(id)sender sum:(NSMutableArray *)sum current:(NSString *)current;
+- (void)PFImageViewController:(id)sender viewPicture:(NSString *)link;
+- (void)PFGalleryViewController:(id)sender sum:(NSMutableArray *)sum current:(NSString *)current;
 
 @end
 

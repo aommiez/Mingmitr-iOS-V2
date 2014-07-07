@@ -187,8 +187,8 @@
     }
 }
 
-- (void)PFDetailViewController:(id)sender viewPicture:(NSString *)link{
-    [self.delegate PFD1ViewController:self viewPicture:link];
+- (void)PFImageViewController:(id)sender viewPicture:(NSString *)link{
+    [self.delegate PFImageViewController:self viewPicture:link];
 }
 
 - (void)PFGalleryViewController:(id)sender sum:(NSMutableArray *)sum current:(NSString *)current{
