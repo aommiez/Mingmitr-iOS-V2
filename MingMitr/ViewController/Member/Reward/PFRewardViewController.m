@@ -67,6 +67,8 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.waitView removeFromSuperview];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+    [self.webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitTouchCallout='none';"];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
