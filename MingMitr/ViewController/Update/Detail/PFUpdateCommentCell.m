@@ -20,6 +20,9 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+    
+    self.myImageView.layer.masksToBounds = YES;
+    self.myImageView.contentMode = UIViewContentModeScaleAspectFill;
 }
 
 @end

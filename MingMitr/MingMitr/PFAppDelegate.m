@@ -163,6 +163,11 @@ BOOL newMedia;
 	NSLog(@"Failed to get token, error: %@", error);
 }
 
+- (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary*)userInfo
+{
+	NSLog(@"Received notification: %@", userInfo);
+}
+
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
 {
     return (UIInterfaceOrientationMaskAll);

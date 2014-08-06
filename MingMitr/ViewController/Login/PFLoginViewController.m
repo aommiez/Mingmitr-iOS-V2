@@ -197,7 +197,15 @@ NSString *password;
 - (IBAction)signinTapped:(id)sender {
     
     [self hideKeyboard];
-    [self.mingmitrSDK LoginWithUsername:self.emailSignIn.text password:self.passwordSignIn.text];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString *devicetoken = [NSString stringWithFormat:@"%@",[defaults objectForKey:@"deviceToken"]];
+    
+    if ([devicetoken isEqualToString:@"(null)"] || [devicetoken isEqualToString:@""]) {
+        [self.mingmitrSDK LoginWithUsername:self.emailSignIn.text password:self.passwordSignIn.text ios_device_token:@""];
+    } else {
+        [self.mingmitrSDK LoginWithUsername:self.emailSignIn.text password:self.passwordSignIn.text ios_device_token:[defaults objectForKey:@"deviceToken"]];
+    }
     
 }
 - (IBAction)dateBTapped:(id)sender {
@@ -353,7 +361,15 @@ NSString *password;
         [self closeBox];
         
         [self hideKeyboard];
-        [self.mingmitrSDK LoginWithUsername:[response objectForKey:@"username"] password:password];
+        
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSString *devicetoken = [NSString stringWithFormat:@"%@",[defaults objectForKey:@"deviceToken"]];
+        
+        if ([devicetoken isEqualToString:@"(null)"] || [devicetoken isEqualToString:@""]) {
+            [self.mingmitrSDK LoginWithUsername:self.emailSignIn.text password:self.passwordSignIn.text ios_device_token:@""];
+        } else {
+            [self.mingmitrSDK LoginWithUsername:self.emailSignIn.text password:self.passwordSignIn.text ios_device_token:[defaults objectForKey:@"deviceToken"]];
+        }
     }
 }
 - (void)PFMingMitrSDK:(id)sender registerWithUsernameErrorResponse:(NSString *)errorResponse {

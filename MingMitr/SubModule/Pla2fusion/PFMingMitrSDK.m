@@ -107,9 +107,9 @@
     //NSString *urlStr = [[NSString alloc] initWithFormat:@"%@oauth/password",API_URL];
     
 }
-- (void)LoginWithUsername:(NSString *)username password:(NSString *)password {
+- (void)LoginWithUsername:(NSString *)username password:(NSString *)password ios_device_token:(NSString *)ios_device_token{
     NSString *urlStr = [[NSString alloc] initWithFormat:@"%@oauth/password",API_OAUTH];
-    NSDictionary *parameters = @{@"username":username , @"password":password};
+    NSDictionary *parameters = @{@"username":username , @"password":password ,@"ios_device_token":ios_device_token};
     [self.manager POST:urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         [self.delegate PFMingMitrSDK:self LoginWithUsernameResponse:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {

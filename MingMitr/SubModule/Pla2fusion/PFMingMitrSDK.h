@@ -119,7 +119,7 @@
 - (void)LoginWithFacebook:(NSString *)facebook_token ios_device_token:(NSString *)ios_device_token;
 - (void)loginWithEmail:(NSString *)email password:(NSString *)password;
 - (void)updateUserById:(NSString *)user_id display_name:(NSString *)display_name picture:(NSString *)picture_base64 mobile_phone:(NSString *)mobile_phone website:(NSString *)website gender:(NSString *)gender birth_date:(NSString *)birth_date;
-- (void)LoginWithUsername:(NSString *)username password:(NSString *)password;
+- (void)LoginWithUsername:(NSString *)username password:(NSString *)password ios_device_token:(NSString *)ios_device_token;
 - (void)setUserIdAndTokenToCoreData:(NSString *)user_id token:(NSString *)token;
 - (void)logOut;
 #pragma mark - News
