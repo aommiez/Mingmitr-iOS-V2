@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AMBlurView.h"
 #import "PFNotificationCell.h"
-
+#import "PFMingMitrSDK.h"
 @protocol PFNotificationViewControllerDelegate <NSObject>
 
 - (void) PFNotificationViewControllerBack;
@@ -17,7 +17,7 @@
 @end
 
 @interface PFNotificationViewController : UIViewController
-
+@property (strong, nonatomic) PFMingMitrSDK *mingmitrSDK;
 @property (assign, nonatomic) id<PFNotificationViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

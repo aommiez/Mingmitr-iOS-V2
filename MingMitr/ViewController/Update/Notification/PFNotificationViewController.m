@@ -26,7 +26,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.mingmitrSDK = [[PFMingMitrSDK alloc] init];
+    self.mingmitrSDK.delegate = self;
+    [self.mingmitrSDK userGetNotifly];
     self.navigationItem.title = @"Notifications";
     
     [self.blurView setBlurTintColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:5]];
@@ -85,5 +87,10 @@
         }
     }
 }
-
+- (void)PFMingMitrSDK:(id)sender userGetNotiflyResponse:(NSDictionary *)response {
+    NSLog(@"%@",response);
+}
+- (void)PFMingMitrSDK:(id)sender userGetNotiflyErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
+}
 @end

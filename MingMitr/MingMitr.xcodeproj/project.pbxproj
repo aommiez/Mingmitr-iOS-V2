@@ -14,11 +14,6 @@
 		36230787194808A800D98915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36230786194808A800D98915 /* main.m */; };
 		3623078B194808A800D98915 /* PFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623078A194808A800D98915 /* PFAppDelegate.m */; };
 		3623078D194808A800D98915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3623078C194808A800D98915 /* Images.xcassets */; };
-		36230794194808A800D98915 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36230793194808A800D98915 /* XCTest.framework */; };
-		36230795194808A800D98915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623077A194808A800D98915 /* Foundation.framework */; };
-		36230796194808A800D98915 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3623077E194808A800D98915 /* UIKit.framework */; };
-		3623079E194808A800D98915 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3623079C194808A800D98915 /* InfoPlist.strings */; };
-		362307A0194808A800D98915 /* MingMitrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623079F194808A800D98915 /* MingMitrTests.m */; };
 		527E1ED7196806FE00A13176 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527E1ED6196806FE00A13176 /* FacebookSDK.framework */; };
 		52A20C55195E89CB00D67BED /* contact_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A20C44195E89CB00D67BED /* contact_light.png */; };
 		52A20C56195E89CB00D67BED /* contact_standby.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A20C45195E89CB00D67BED /* contact_standby.png */; };
@@ -275,16 +270,6 @@
 		EAE0D7CA1949723A0008DD8B /* PFMemberViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAE0D7C91949723A0008DD8B /* PFMemberViewController.xib */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		36230797194808A800D98915 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3623076F194808A800D98915 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 36230776194808A800D98915;
-			remoteInfo = MingMitr;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		36230777194808A800D98915 /* MingMitr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MingMitr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3623077A194808A800D98915 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -297,7 +282,6 @@
 		36230789194808A800D98915 /* PFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PFAppDelegate.h; sourceTree = "<group>"; };
 		3623078A194808A800D98915 /* PFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PFAppDelegate.m; sourceTree = "<group>"; };
 		3623078C194808A800D98915 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		36230792194808A800D98915 /* MingMitrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MingMitrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36230793194808A800D98915 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3623079B194808A800D98915 /* MingMitrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MingMitrTests-Info.plist"; sourceTree = "<group>"; };
 		3623079D194808A800D98915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -693,16 +677,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3623078F194808A800D98915 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				36230794194808A800D98915 /* XCTest.framework in Frameworks */,
-				36230796194808A800D98915 /* UIKit.framework in Frameworks */,
-				36230795194808A800D98915 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -720,7 +694,6 @@
 			isa = PBXGroup;
 			children = (
 				36230777194808A800D98915 /* MingMitr.app */,
-				36230792194808A800D98915 /* MingMitrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1599,24 +1572,6 @@
 			productReference = 36230777194808A800D98915 /* MingMitr.app */;
 			productType = "com.apple.product-type.application";
 		};
-		36230791194808A800D98915 /* MingMitrTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 362307A6194808A800D98915 /* Build configuration list for PBXNativeTarget "MingMitrTests" */;
-			buildPhases = (
-				3623078E194808A800D98915 /* Sources */,
-				3623078F194808A800D98915 /* Frameworks */,
-				36230790194808A800D98915 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				36230798194808A800D98915 /* PBXTargetDependency */,
-			);
-			name = MingMitrTests;
-			productName = MingMitrTests;
-			productReference = 36230792194808A800D98915 /* MingMitrTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1629,9 +1584,6 @@
 				TargetAttributes = {
 					36230776194808A800D98915 = {
 						DevelopmentTeam = Q246MJM9JV;
-					};
-					36230791194808A800D98915 = {
-						TestTargetID = 36230776194808A800D98915;
 					};
 				};
 			};
@@ -1648,7 +1600,6 @@
 			projectRoot = "";
 			targets = (
 				36230776194808A800D98915 /* MingMitr */,
-				36230791194808A800D98915 /* MingMitrTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1801,14 +1752,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		36230790194808A800D98915 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3623079E194808A800D98915 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1930,23 +1873,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3623078E194808A800D98915 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				362307A0194808A800D98915 /* MingMitrTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		36230798194808A800D98915 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 36230776194808A800D98915 /* MingMitr */;
-			targetProxy = 36230797194808A800D98915 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		36230783194808A800D98915 /* InfoPlist.strings */ = {
@@ -2041,6 +1968,7 @@
 		362307A4194808A800D98915 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
@@ -2049,13 +1977,15 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../Frameworks\"",
 					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks",
+					"/Users/MRG/Documents/Apps/Mingmitr-iOS-V2/Frameworks",
 					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks/FacebookSDK",
+					"/Users/MRG/Documents/Apps/Mingmitr-iOS-V2/Frameworks/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
 				INFOPLIST_FILE = "MingMitr/MingMitr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56E66E83-C2C5-485A-979D-B7DA41362D87";
+				PROVISIONING_PROFILE = "794d2c3f-6b10-4a5a-9831-f1effc5268c4";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2064,6 +1994,7 @@
 		362307A5194808A800D98915 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Phee Puthaprasert (Q8MZLL79Y4)";
@@ -2072,55 +2003,17 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/../Frameworks\"",
 					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks",
+					"/Users/MRG/Documents/Apps/Mingmitr-iOS-V2/Frameworks",
 					"/Users/macbookpro/Documents/Pla2App/Mingmitr-iOS-V2/Frameworks/FacebookSDK",
+					"/Users/MRG/Documents/Apps/Mingmitr-iOS-V2/Frameworks/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
 				INFOPLIST_FILE = "MingMitr/MingMitr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "56E66E83-C2C5-485A-979D-B7DA41362D87";
+				PROVISIONING_PROFILE = "794d2c3f-6b10-4a5a-9831-f1effc5268c4";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		362307A7194808A800D98915 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MingMitr.app/MingMitr";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "MingMitrTests/MingMitrTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		362307A8194808A800D98915 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MingMitr.app/MingMitr";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
-				INFOPLIST_FILE = "MingMitrTests/MingMitrTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
 		};
@@ -2141,15 +2034,6 @@
 			buildConfigurations = (
 				362307A4194808A800D98915 /* Debug */,
 				362307A5194808A800D98915 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		362307A6194808A800D98915 /* Build configuration list for PBXNativeTarget "MingMitrTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				362307A7194808A800D98915 /* Debug */,
-				362307A8194808A800D98915 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

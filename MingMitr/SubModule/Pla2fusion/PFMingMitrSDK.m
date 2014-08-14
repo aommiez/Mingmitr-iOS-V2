@@ -364,6 +364,25 @@
 - (void)setAuthEnitiesField:(NSString *)field value:(NSString *)value {
     
 }
+
+- (void)userGetNotifly {
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@notify/user?access_token=%@",API_URL,[self getUserToken]];
+    [self.manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFMingMitrSDK:self userGetNotiflyResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFMingMitrSDK:self userGetNotiflyErrorResponse:[error localizedDescription]];
+    }];
+}
+
+- (void)checkBadge {
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@notify/user/unopened_length/%@",API_URL,[self getUserId]];
+    [self.manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        [self.delegate PFMingMitrSDK:self checkBadgeResponse:responseObject];
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        [self.delegate PFMingMitrSDK:self checkBadgeErrorResponse:[error localizedDescription]];
+    }];
+}
+
 //!!!: Test SDK
 - (void)testSDK {
     //EntitiesUtility *en = [[EntitiesUtility alloc] init];

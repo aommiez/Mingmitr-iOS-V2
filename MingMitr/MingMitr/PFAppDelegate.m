@@ -45,6 +45,7 @@ BOOL newMedia;
     if ([[self.mingmitrSDK getAuth] isEqualToString:@"Guest Login"] || [[self.mingmitrSDK getAuth] isEqualToString:@"NO"]) {
         //[self.mingmitrSDK LoginWithUsername:@"a@a.com" password:@"123456"];
     } else {
+        [self.mingmitrSDK checkBadge];
         //NSLog(@"Login");
     }
     
@@ -152,7 +153,7 @@ BOOL newMedia;
 - (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //[defaults setObject:deviceToken forKey:@"deviceToken"];
+    [defaults setObject:deviceToken forKey:@"deviceToken"];
     [defaults synchronize];
     
     NSLog(@"My token is: %@", deviceToken);
@@ -165,7 +166,11 @@ BOOL newMedia;
 
 - (void)application:(UIApplication*)application didReceiveRemoteNotification:(NSDictionary*)userInfo
 {
-	NSLog(@"Received notification: %@", userInfo);
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[[userInfo objectForKey:@"aps"] objectForKey:@"badge"] forKey:@"badge"];
+    [defaults synchronize];
+	NSLog(@"Received notification: %@", [[userInfo objectForKey:@"aps"] objectForKey:@"badge"]);
+    
 }
 
 - (NSUInteger)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
@@ -405,5 +410,12 @@ BOOL newMedia;
     
     return wasHandled;
 }
-
+- (void)PFMingMitrSDK:(id)sender checkBadgeResponse:(NSDictionary *)response {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[response objectForKey:@"length"] forKey:@"badge"];
+    [defaults synchronize];
+}
+- (void)PFMingMitrSDK:(id)sender checkBadgeErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
+}
 @end

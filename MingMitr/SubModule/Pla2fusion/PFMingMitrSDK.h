@@ -89,7 +89,11 @@
 - (void)PFMingMitrSDK:(id)sender getContactResponse:(NSDictionary *)response;
 - (void)PFMingMitrSDK:(id)sender getContactErrorResponse:(NSString *)errorResponse;
 
+- (void)PFMingMitrSDK:(id)sender checkBadgeResponse:(NSDictionary *)response;
+- (void)PFMingMitrSDK:(id)sender checkBadgeErrorResponse:(NSString *)errorResponse;
 
+- (void)PFMingMitrSDK:(id)sender userGetNotiflyResponse:(NSDictionary *)response;
+- (void)PFMingMitrSDK:(id)sender userGetNotiflyErrorResponse:(NSString *)errorResponse;
 @end
 
 @interface PFMingMitrSDK : NSObject
@@ -152,4 +156,9 @@
 - (void)setAuthEnitiesField:(NSString *)field value:(NSString *)value;
 //!!!: Test SDK
 - (void)testSDK;
+#pragma mark - Notify
+- (void)userGetNotifly;
+- (void)checkBadge;
+
+
 @end

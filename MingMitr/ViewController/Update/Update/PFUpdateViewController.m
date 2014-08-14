@@ -31,6 +31,17 @@ BOOL refreshDataNews;
 {
     [super viewDidLoad];
     
+    
+    
+    if ([[self.mingmitrSDK getAuth] isEqualToString:@"Guest Login"] || [[self.mingmitrSDK getAuth] isEqualToString:@"NO"]) {
+        //[self.mingmitrSDK LoginWithUsername:@"a@a.com" password:@"123456"];
+    } else {
+        [self.mingmitrSDK checkBadge];
+        NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+        NSLog(@"%@",[def objectForKey:@"access_token"]);
+        [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(checkN:) userInfo:nil repeats:YES];
+    }
+    
     [self.view addSubview:self.waitView];
     
     CALayer *popup = [self.popupwaitView layer];
@@ -84,7 +95,11 @@ BOOL refreshDataNews;
     UIView *fv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     self.tableView.tableFooterView = fv;
 }
-
+-(void)checkN:(NSTimer *)timer
+{
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@",[def objectForKey:@"badge"]);
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -197,7 +212,10 @@ BOOL refreshDataNews;
 }
 
 - (void)PFAccountViewController:(id)sender{
-
+    [self.mingmitrSDK checkBadge];
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@",[def objectForKey:@"access_token"]);
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(checkN:) userInfo:nil repeats:YES];
     [self.delegate HideTabbar];
     
     PFAccountViewController *accountView = [[PFAccountViewController alloc] init];
@@ -212,7 +230,10 @@ BOOL refreshDataNews;
 }
 
 - (void)PFNotifyViewController:(id)sender{
-
+    [self.mingmitrSDK checkBadge];
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@",[def objectForKey:@"access_token"]);
+    [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(checkN:) userInfo:nil repeats:YES];
     [self.delegate HideTabbar];
     
     PFNotificationViewController *notifyView = [[PFNotificationViewController alloc] init];
