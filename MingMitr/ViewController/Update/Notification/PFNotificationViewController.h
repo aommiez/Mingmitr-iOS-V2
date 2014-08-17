@@ -8,25 +8,37 @@
 
 #import <UIKit/UIKit.h>
 #import "AMBlurView.h"
+#import "PFUpdateDetailViewController.h"
 #import "PFNotificationCell.h"
+
 #import "PFMingMitrSDK.h"
+
 @protocol PFNotificationViewControllerDelegate <NSObject>
 
-- (void) PFNotificationViewControllerBack;
+- (void)PFNotificationViewControllerBack;
+- (void)PFUpdateDetailViewController:(id)sender viewPicture:(NSString *)link;
 
 @end
 
-@interface PFNotificationViewController : UIViewController
+@interface PFNotificationViewController : UIViewController <PFUpdateDetailViewControllerDelegate>
+
+@property AFHTTPRequestOperationManager *manager;
 @property (strong, nonatomic) PFMingMitrSDK *mingmitrSDK;
 @property (assign, nonatomic) id<PFNotificationViewControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (retain, nonatomic) NSArray *tableData;
-@property (retain, nonatomic) NSDictionary *obj;
-@property (retain, nonatomic) NSString *nString;
-@property (retain, nonatomic) NSString *type;
+@property (strong, nonatomic) IBOutlet UIView *waitView;
+@property (strong, nonatomic) IBOutlet UIView *popupwaitView;
 
-@property (retain, nonatomic) IBOutlet AMBlurView *blurView;
-@property (retain, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) NSArray *tableData;
+@property (strong, nonatomic) NSMutableArray *arrObj;
+@property (strong, nonatomic) NSMutableArray *arrObjNotify;
+@property (strong, nonatomic) NSDictionary *obj;
+@property (strong, nonatomic) NSDictionary *objNotify;
+@property (strong, nonatomic) NSString *nString;
+@property (strong, nonatomic) NSString *type;
+
+@property (strong, nonatomic) IBOutlet AMBlurView *blurView;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
 
 @end

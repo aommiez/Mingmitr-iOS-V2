@@ -410,6 +410,7 @@ BOOL newMedia;
     
     return wasHandled;
 }
+
 - (void)PFMingMitrSDK:(id)sender checkBadgeResponse:(NSDictionary *)response {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:[response objectForKey:@"length"] forKey:@"badge"];
@@ -418,4 +419,5 @@ BOOL newMedia;
 - (void)PFMingMitrSDK:(id)sender checkBadgeErrorResponse:(NSString *)errorResponse {
     NSLog(@"%@",errorResponse);
 }
+
 @end

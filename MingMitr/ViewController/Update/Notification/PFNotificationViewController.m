@@ -19,6 +19,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
+        self.manager = [AFHTTPRequestOperationManager manager];
     }
     return self;
 }
@@ -33,8 +34,15 @@
     
     [self.blurView setBlurTintColor:[UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:5]];
     
-    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
-    self.tableView.tableFooterView = footView;
+    self.arrObj = [[NSMutableArray alloc] init];
+    self.arrObjNotify = [[NSMutableArray alloc] init];
+    
+    [self.view addSubview:self.waitView];
+    
+    CALayer *popup = [self.popupwaitView layer];
+    [popup setMasksToBounds:YES];
+    [popup setCornerRadius:7.0f];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,14 +61,52 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+- (void)PFMingMitrSDK:(id)sender userGetNotiflyResponse:(NSDictionary *)response {
+    //NSLog(@"%@",response);
+    self.obj = response;
+    
+    [self.waitView removeFromSuperview];
+    
+    for (int i=0; i<[[response objectForKey:@"data"] count]; ++i) {
+        [self.arrObj addObject:[[response objectForKey:@"data"] objectAtIndex:i]];
+
+    }
+    
+    [self.tableView reloadData];
+}
+
+- (void)PFMingMitrSDK:(id)sender userGetNotiflyErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
+}
+
+- (void)PFMingMitrSDK:(id)sender getNewsByIdResponse:(NSDictionary *)response {
+    //NSLog(@"%@",response);
+    
+    PFUpdateDetailViewController *mmdetail = [[PFUpdateDetailViewController alloc] init];
+    
+    if(IS_WIDESCREEN){
+        mmdetail = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController_Wide" bundle:nil];
+    } else {
+        mmdetail = [[PFUpdateDetailViewController alloc] initWithNibName:@"PFUpdateDetailViewController" bundle:nil];
+    }
+    
+    mmdetail.obj = response;
+    mmdetail.delegate = self;
+    
+    [self.navigationController pushViewController:mmdetail animated:YES];
+}
+
+- (void)PFMingMitrSDK:(id)sender getNewsByIdErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return [self.arrObj count];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -71,10 +117,46 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.topicLabel.text = @"Joe Smith";
-    cell.timeLabel.text = @"2014-05-24 4:22 PM";
-    cell.msgLabel.text = @"This is a notification. This is a notification. This is a notification. This is a notification. This is a notification. This is a notification. This is a notification.";
+    cell.topicLabel.text = @"Mingmitr";
+    
+    NSString *myDate = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"created_at"] objectForKey:@"date"];
+    NSString *mySmallerDate = [myDate substringToIndex:16];
+    cell.timeLabel.text = mySmallerDate;
+    
+    cell.msgLabel.text = [[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"preview_content"];
+    
+    if ([[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"opened"] intValue] == 0) {
+        cell.bg.image = [UIImage imageNamed:@"NotBoxNoReadIp5"];
+    } else {
+        cell.bg.image = [UIImage imageNamed:@"NotBoxReadedIp5"];
+    }
+    
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *type = [[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"type"];
+    
+    if ( [type isEqualToString:@"news"]) {
+        [self.mingmitrSDK getNewsById:[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"object_id"]];
+    }
+    
+    NSString *urlStr = [[NSString alloc] initWithFormat:@"%@notify/user/opened/%@",API_URL,[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"id"]];
+    [self.manager GET:urlStr parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@",responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+}
+
+- (void)PFUpdateDetailViewController:(id)sender viewPicture:(NSString *)link{
+    [self.delegate PFUpdateDetailViewController:self viewPicture:link];
+}
+
+- (void)PFUpdateDetailViewControllerBack {
+    [self viewDidLoad];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -87,10 +169,5 @@
         }
     }
 }
-- (void)PFMingMitrSDK:(id)sender userGetNotiflyResponse:(NSDictionary *)response {
-    NSLog(@"%@",response);
-}
-- (void)PFMingMitrSDK:(id)sender userGetNotiflyErrorResponse:(NSString *)errorResponse {
-    NSLog(@"%@",errorResponse);
-}
+
 @end

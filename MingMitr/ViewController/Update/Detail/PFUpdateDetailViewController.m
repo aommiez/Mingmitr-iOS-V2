@@ -408,7 +408,11 @@ BOOL newMediaDetail;
     cell.commentLabel.frame = CGRectMake(cell.commentLabel.frame.origin.x, cell.commentLabel.frame.origin.y, cell.commentLabel.frame.size.width, heightLable);
     
     cell.timeComment.frame = CGRectMake(cell.timeComment.frame.origin.x,heightLable + 14, cell.timeComment.frame.size.width, cell.timeComment.frame.size.height);
-    cell.timeComment.text = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"updated_at"] objectForKey:@"date"];
+    
+    NSString *myDate = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"updated_at"] objectForKey:@"date"];
+    NSString *mySmallerDate = [myDate substringToIndex:16];
+    cell.timeComment.text = mySmallerDate;
+    
     //cell.timeComment.text = [[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"created_text"];
     
     cell.imgBut.tag = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"id"] intValue];

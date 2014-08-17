@@ -18,6 +18,9 @@ BOOL loadNews;
 BOOL noDataNews;
 BOOL refreshDataNews;
 
+int newsInt;
+NSTimer *timmer;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -59,28 +62,36 @@ BOOL refreshDataNews;
     
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(account)];
     
+    NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@",[def objectForKey:@"badge"]);
+
     //notification if (noti = 0) else
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Notification_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(notify)];
-    
-    /*
-    UIButton *toggleKeyboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    toggleKeyboardButton.bounds = CGRectMake( 0, 0, 21, 21 );
-    [toggleKeyboardButton setTitle:@"10" forState:UIControlStateNormal];
-    [toggleKeyboardButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
-    
-    [toggleKeyboardButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
-    toggleKeyboardButton.contentVerticalAlignment = UIControlContentHorizontalAlignmentCenter;
-    
-    [toggleKeyboardButton setBackgroundColor:[UIColor clearColor]];
-    [toggleKeyboardButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
-    [toggleKeyboardButton.layer setBorderWidth: 1.0];
-    [toggleKeyboardButton.layer setCornerRadius:10.0f];
-    [toggleKeyboardButton addTarget:self action:@selector(notify) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:toggleKeyboardButton];
-     */
+    if ([[def objectForKey:@"badge"] intValue] == 0) {
+        
+        UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Notification_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(notify)];
+        self.navItem.rightBarButtonItem = rightButton;
+        
+    } else {
+        
+        UIButton *toggleKeyboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        toggleKeyboardButton.bounds = CGRectMake( 0, 0, 21, 21 );
+        [toggleKeyboardButton setTitle:[def objectForKey:@"badge"] forState:UIControlStateNormal];
+        [toggleKeyboardButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
+        
+        [toggleKeyboardButton.titleLabel setTextAlignment:NSTextAlignmentCenter];
+        toggleKeyboardButton.contentVerticalAlignment = UIControlContentHorizontalAlignmentCenter;
+        
+        [toggleKeyboardButton setBackgroundColor:[UIColor clearColor]];
+        [toggleKeyboardButton.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+        [toggleKeyboardButton.layer setBorderWidth: 1.0];
+        [toggleKeyboardButton.layer setCornerRadius:10.0f];
+        [toggleKeyboardButton addTarget:self action:@selector(notify) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *rightButton = [[UIBarButtonItem alloc] initWithCustomView:toggleKeyboardButton];
+        self.navItem.rightBarButtonItem = rightButton;
+        
+    }
     
     self.navItem.leftBarButtonItem = leftButton;
-    self.navItem.rightBarButtonItem = rightButton;
     
     loadNews = NO;
     noDataNews = NO;
@@ -95,11 +106,36 @@ BOOL refreshDataNews;
     UIView *fv = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     self.tableView.tableFooterView = fv;
 }
+
 -(void)checkN:(NSTimer *)timer
 {
+    [self.mingmitrSDK checkBadge];
+}
+
+- (void)PFMingMitrSDK:(id)sender checkBadgeResponse:(NSDictionary *)response {
+    //NSLog(@"%@",response);
+
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
     NSLog(@"%@",[def objectForKey:@"badge"]);
+    NSLog(@"%@",[response objectForKey:@"length"]);
+    if ([[def objectForKey:@"badge"] intValue] == [[response objectForKey:@"length"] intValue]) {
+
+    } else {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults setObject:[response objectForKey:@"length"] forKey:@"badge"];
+        [defaults synchronize];
+        [self viewDidLoad];
+    }
 }
+- (void)PFMingMitrSDK:(id)sender checkBadgeErrorResponse:(NSString *)errorResponse {
+    NSLog(@"%@",errorResponse);
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@"0" forKey:@"badge"];
+    [defaults synchronize];
+    [self viewDidLoad];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -276,7 +312,7 @@ BOOL refreshDataNews;
     NSString *urlimg = [[NSString alloc] initWithFormat:@"%@%@%@",@"http://mingmitr-api.pla2app.com/picture/",thumbid,@"?width=800&height=600"];
     cell.thumbnails.imageURL = [[NSURL alloc] initWithString:urlimg];
     
-    cell.backgroundColor = [UIColor clearColor];
+    //cell.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     [cell.detailNewsView.layer setCornerRadius:5.0f];
     return cell;

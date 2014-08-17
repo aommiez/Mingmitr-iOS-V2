@@ -14,6 +14,7 @@
 		36230787194808A800D98915 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36230786194808A800D98915 /* main.m */; };
 		3623078B194808A800D98915 /* PFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3623078A194808A800D98915 /* PFAppDelegate.m */; };
 		3623078D194808A800D98915 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3623078C194808A800D98915 /* Images.xcassets */; };
+		52662D9F199DB2C2005CD637 /* PFNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52662D9E199DB2C2005CD637 /* PFNotificationViewController.xib */; };
 		527E1ED7196806FE00A13176 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527E1ED6196806FE00A13176 /* FacebookSDK.framework */; };
 		52A20C55195E89CB00D67BED /* contact_light.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A20C44195E89CB00D67BED /* contact_light.png */; };
 		52A20C56195E89CB00D67BED /* contact_standby.png in Resources */ = {isa = PBXBuildFile; fileRef = 52A20C45195E89CB00D67BED /* contact_standby.png */; };
@@ -66,7 +67,6 @@
 		EA1498A11948B349007AE3E6 /* PFF2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498A01948B349007AE3E6 /* PFF2ViewController.xib */; };
 		EA1498A31948B35F007AE3E6 /* PFD1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498A21948B35F007AE3E6 /* PFD1ViewController.xib */; };
 		EA1498A51948B3F0007AE3E6 /* PFUpdateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498A41948B3F0007AE3E6 /* PFUpdateViewController.xib */; };
-		EA1498A71948B412007AE3E6 /* PFNotificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498A61948B412007AE3E6 /* PFNotificationViewController.xib */; };
 		EA1498AB1948B52D007AE3E6 /* PFUpdateCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1498A91948B52D007AE3E6 /* PFUpdateCommentCell.m */; };
 		EA1498AC1948B52D007AE3E6 /* PFUpdateCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498AA1948B52D007AE3E6 /* PFUpdateCommentCell.xib */; };
 		EA1498AE1948B638007AE3E6 /* PFUpdateDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1498AD1948B638007AE3E6 /* PFUpdateDetailViewController.xib */; };
@@ -286,6 +286,7 @@
 		3623079B194808A800D98915 /* MingMitrTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MingMitrTests-Info.plist"; sourceTree = "<group>"; };
 		3623079D194808A800D98915 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3623079F194808A800D98915 /* MingMitrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MingMitrTests.m; sourceTree = "<group>"; };
+		52662D9E199DB2C2005CD637 /* PFNotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFNotificationViewController.xib; sourceTree = "<group>"; };
 		527E1ED6196806FE00A13176 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../Frameworks/FacebookSDK.framework; sourceTree = "<group>"; };
 		52A20C44195E89CB00D67BED /* contact_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_light.png; sourceTree = "<group>"; };
 		52A20C45195E89CB00D67BED /* contact_standby.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_standby.png; sourceTree = "<group>"; };
@@ -343,7 +344,6 @@
 		EA1498A01948B349007AE3E6 /* PFF2ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFF2ViewController.xib; sourceTree = "<group>"; };
 		EA1498A21948B35F007AE3E6 /* PFD1ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFD1ViewController.xib; sourceTree = "<group>"; };
 		EA1498A41948B3F0007AE3E6 /* PFUpdateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFUpdateViewController.xib; sourceTree = "<group>"; };
-		EA1498A61948B412007AE3E6 /* PFNotificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFNotificationViewController.xib; sourceTree = "<group>"; };
 		EA1498A81948B52D007AE3E6 /* PFUpdateCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFUpdateCommentCell.h; sourceTree = "<group>"; };
 		EA1498A91948B52D007AE3E6 /* PFUpdateCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PFUpdateCommentCell.m; sourceTree = "<group>"; };
 		EA1498AA1948B52D007AE3E6 /* PFUpdateCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PFUpdateCommentCell.xib; sourceTree = "<group>"; };
@@ -850,7 +850,7 @@
 				EA1498891948AFFB007AE3E6 /* PFNotificationViewController.h */,
 				EA14988A1948AFFB007AE3E6 /* PFNotificationViewController.m */,
 				EA14988B1948AFFB007AE3E6 /* PFNotificationViewController_Wide.xib */,
-				EA1498A61948B412007AE3E6 /* PFNotificationViewController.xib */,
+				52662D9E199DB2C2005CD637 /* PFNotificationViewController.xib */,
 				EA14988E1948B0B8007AE3E6 /* PFNotificationCell.h */,
 				EA14988F1948B0B8007AE3E6 /* PFNotificationCell.m */,
 				EA1498901948B0B8007AE3E6 /* PFNotificationCell.xib */,
@@ -1631,6 +1631,7 @@
 				EA024A94194FFE950032CF51 /* icon_reload.png in Resources */,
 				EA8D0FBB19482CC700160E5D /* button_minus.png in Resources */,
 				EA14987C1948A671007AE3E6 /* NotBoxReadedIp4@2x.png in Resources */,
+				52662D9F199DB2C2005CD637 /* PFNotificationViewController.xib in Resources */,
 				EA8D0FBE19482CC700160E5D /* button_plus_select.png in Resources */,
 				EA8D0F8C19481C0300160E5D /* PFWebViewController_Wide.xib in Resources */,
 				EA8D100F19484D1500160E5D /* PFFranchiseCell.xib in Resources */,
@@ -1681,7 +1682,6 @@
 				EA8D101419484D6600160E5D /* PFDetailCell.xib in Resources */,
 				EA14987B1948A671007AE3E6 /* NotBoxReadedIp4.png in Resources */,
 				EA8D0F531948123C00160E5D /* README.txt in Resources */,
-				EA1498A71948B412007AE3E6 /* PFNotificationViewController.xib in Resources */,
 				EA8D0F781948156A00160E5D /* chapter_branch_03.png in Resources */,
 				EA8D0FD919482F7900160E5D /* PFContactViewController.xib in Resources */,
 				52A20C5C195E89CB00D67BED /* update_standby.png in Resources */,
@@ -1985,7 +1985,7 @@
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
 				INFOPLIST_FILE = "MingMitr/MingMitr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "794d2c3f-6b10-4a5a-9831-f1effc5268c4";
+				PROVISIONING_PROFILE = "f79a804d-7b9c-49bb-99d7-f2734d7e4f29";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -2011,7 +2011,7 @@
 				GCC_PREFIX_HEADER = "MingMitr/MingMitr-Prefix.pch";
 				INFOPLIST_FILE = "MingMitr/MingMitr-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "794d2c3f-6b10-4a5a-9831-f1effc5268c4";
+				PROVISIONING_PROFILE = "f79a804d-7b9c-49bb-99d7-f2734d7e4f29";
 				SDKROOT = iphoneos7.1;
 				WRAPPER_EXTENSION = app;
 			};
