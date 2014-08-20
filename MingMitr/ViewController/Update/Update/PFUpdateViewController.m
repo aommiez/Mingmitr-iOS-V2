@@ -63,6 +63,7 @@ NSTimer *timmer;
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Setting_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(account)];
     
     NSUserDefaults *def = [NSUserDefaults standardUserDefaults];
+    NSString *badge = [[NSString alloc] initWithFormat:@"%@",[def objectForKey:@"badge"]];
     NSLog(@"%@",[def objectForKey:@"badge"]);
 
     //notification if (noti = 0) else
@@ -75,7 +76,7 @@ NSTimer *timmer;
         
         UIButton *toggleKeyboardButton = [UIButton buttonWithType:UIButtonTypeCustom];
         toggleKeyboardButton.bounds = CGRectMake( 0, 0, 21, 21 );
-        [toggleKeyboardButton setTitle:[def objectForKey:@"badge"] forState:UIControlStateNormal];
+        [toggleKeyboardButton setTitle:badge forState:UIControlStateNormal];
         [toggleKeyboardButton.titleLabel setFont:[UIFont systemFontOfSize:12]];
         
         [toggleKeyboardButton.titleLabel setTextAlignment:NSTextAlignmentCenter];

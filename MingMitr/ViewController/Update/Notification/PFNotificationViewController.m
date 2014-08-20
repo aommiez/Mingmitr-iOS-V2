@@ -62,7 +62,7 @@
 }
 
 - (void)PFMingMitrSDK:(id)sender userGetNotiflyResponse:(NSDictionary *)response {
-    //NSLog(@"%@",response);
+    NSLog(@"%@",response);
     self.obj = response;
     
     [self.waitView removeFromSuperview];
@@ -117,7 +117,7 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.topicLabel.text = @"Mingmitr";
+    cell.topicLabel.text = [[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"preview_header"];
     
     NSString *myDate = [[[self.arrObj objectAtIndex:indexPath.row] objectForKey:@"created_at"] objectForKey:@"date"];
     NSString *mySmallerDate = [myDate substringToIndex:16];
